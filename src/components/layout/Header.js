@@ -3,16 +3,17 @@ import { Link } from 'react-router-dom';
 import { Search, Users, Briefcase, Bell, MessageSquare, User } from 'lucide-react';
 
 const Header = () => (
-  <header className="bg-white shadow-md sticky top-0 z-50">
+  <header style={{backgroundColor: '#1E1E1E'}} className="shadow-md sticky top-0 z-50">
     <div className="container mx-auto px-4 py-3">
       <div className="flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          <Link to="/" className="text-blue-600 text-3xl font-bold">in</Link>
+          <Link to="/" className="text-blue-400 text-3xl font-bold">in</Link>
           <div className="relative">
             <input
               type="text"
               placeholder="Search"
-              className="bg-gray-100 px-4 py-2 pl-10 rounded-md w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              style={{backgroundColor: '#2C2C2C', color: '#E0E0E0'}}
+              className="px-4 py-2 pl-10 rounded-md w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
           </div>
@@ -34,7 +35,7 @@ const Header = () => (
 
 const NavItem = ({ to, icon, text }) => (
   <li>
-    <Link to={to} className="flex flex-col items-center text-gray-500 hover:text-gray-900">
+    <Link to={to} className="flex flex-col items-center text-gray-400 hover:text-white">
       {icon}
       <span className="text-xs mt-1">{text}</span>
     </Link>

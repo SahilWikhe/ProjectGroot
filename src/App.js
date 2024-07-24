@@ -11,7 +11,7 @@ function App() {
   return (
     <AppProvider>
       <Router>
-        <div className="bg-gray-100 min-h-screen flex flex-col">
+        <div style={{backgroundColor: '#121212', color: '#E0E0E0'}} className="min-h-screen flex flex-col">
           <Header />
           <div className="flex-grow container mx-auto px-4 py-8">
             <Routes>
@@ -21,8 +21,8 @@ function App() {
               <Route path="/jobs" element={<Jobs />} />
             </Routes>
           </div>
-          <footer className="bg-white shadow-lg mt-8 py-4">
-            <div className="container mx-auto text-center text-gray-600">
+          <footer style={{backgroundColor: '#1E1E1E'}} className="shadow-lg mt-8 py-4">
+            <div className="container mx-auto text-center text-gray-400">
               © 2023 LinkedIn Clone. All rights reserved.
             </div>
           </footer>

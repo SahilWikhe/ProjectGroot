@@ -2,7 +2,6 @@ import React from 'react';
 import ProfileCard from '../components/profile/ProfileCard';
 import NewPost from '../components/feed/NewPost';
 import FeedItem from '../components/feed/FeedItem';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAppContext } from '../AppContext';
 
 const Dashboard = () => {
@@ -23,18 +22,18 @@ const Dashboard = () => {
         </div>
         <div>
           <ProfileCard />
-          <Card>
-            <CardHeader>
-              <CardTitle>People You May Know</CardTitle>
-            </CardHeader>
-            <CardContent>
+          <div className="bg-white shadow rounded-lg mt-4">
+            <div className="p-4 border-b">
+              <h2 className="text-xl font-semibold">People You May Know</h2>
+            </div>
+            <div className="p-4">
               <ul>
                 <li className="mb-2">Alice Brown</li>
                 <li className="mb-2">Charlie Davis</li>
                 <li>Eva Green</li>
               </ul>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
     </main>

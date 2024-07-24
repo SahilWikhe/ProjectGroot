@@ -1,16 +1,15 @@
 import React from 'react';
 import ProfileCard from '../components/profile/ProfileCard';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Profile = () => {
   return (
     <main className="max-w-6xl mx-auto py-8 px-4">
       <ProfileCard />
-      <Card className="mt-4">
-        <CardHeader>
-          <CardTitle>Experience</CardTitle>
-        </CardHeader>
-        <CardContent>
+      <div className="bg-white shadow rounded-lg mt-4">
+        <div className="p-4 border-b">
+          <h2 className="text-xl font-semibold">Experience</h2>
+        </div>
+        <div className="p-4">
           <ul>
             <li className="mb-4">
               <h3 className="font-semibold">Software Developer</h3>
@@ -23,8 +22,8 @@ const Profile = () => {
               <p className="text-sm text-gray-500">2018 - 2020</p>
             </li>
           </ul>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </main>
   );
 };

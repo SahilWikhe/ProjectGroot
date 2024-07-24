@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const JobListing = ({ title, company, location }) => (
   <div className="mb-4 p-4 border-b last:border-b-0">
@@ -13,16 +12,16 @@ const JobListing = ({ title, company, location }) => (
 const Jobs = () => {
   return (
     <main className="max-w-6xl mx-auto py-8 px-4">
-      <Card>
-        <CardHeader>
-          <CardTitle>Recommended Jobs</CardTitle>
-        </CardHeader>
-        <CardContent>
+      <div className="bg-white shadow rounded-lg">
+        <div className="p-4 border-b">
+          <h2 className="text-xl font-semibold">Recommended Jobs</h2>
+        </div>
+        <div className="p-4">
           <JobListing title="Senior Software Engineer" company="Tech Giants Inc." location="San Francisco, CA" />
           <JobListing title="Product Manager" company="Startup Innovators" location="New York, NY" />
           <JobListing title="Data Analyst" company="Big Data Co." location="Remote" />
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </main>
   );
 };

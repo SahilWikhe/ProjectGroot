@@ -6,8 +6,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
-    "lucide-react": "^0.263.1",
-    "@/components/ui": "latest"
+    "lucide-react": "^0.263.1"
     },
     "devDependencies": {
     "react-scripts": "5.0.1",
@@ -40,3 +39,4 @@
     ]
     }
 }
+  

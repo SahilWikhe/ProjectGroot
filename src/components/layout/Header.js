@@ -1,30 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { User, Search, Bell, MessageSquare, Briefcase, Users } from 'lucide-react';
+import { Search, Users, Briefcase, Bell, MessageSquare, User } from 'lucide-react';
 
 const Header = () => (
-<header className="bg-white border-b border-gray-300 p-4">
-<div className="flex justify-between items-center max-w-6xl mx-auto">
-    <div className="flex items-center">
-    <Link to="/" className="text-blue-600 text-2xl font-bold mr-4">in</Link>
-    <input
-        type="text"
-        placeholder="Search"
-        className="bg-gray-100 p-2 rounded-md w-64"
-    />
+  <header className="bg-white shadow-md sticky top-0 z-50">
+    <div className="container mx-auto px-4 py-3">
+      <div className="flex justify-between items-center">
+        <div className="flex items-center space-x-4">
+          <Link to="/" className="text-blue-600 text-3xl font-bold">in</Link>
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search"
+              className="bg-gray-100 px-4 py-2 pl-10 rounded-md w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+          </div>
+        </div>
+        <nav>
+          <ul className="flex space-x-6">
+            <NavItem to="/" icon={<Search size={24} />} text="Home" />
+            <NavItem to="/network" icon={<Users size={24} />} text="My Network" />
+            <NavItem to="/jobs" icon={<Briefcase size={24} />} text="Jobs" />
+            <NavItem to="/messaging" icon={<MessageSquare size={24} />} text="Messaging" />
+            <NavItem to="/notifications" icon={<Bell size={24} />} text="Notifications" />
+            <NavItem to="/profile" icon={<User size={24} />} text="Me" />
+          </ul>
+        </nav>
+      </div>
     </div>
-    <nav>
-    <ul className="flex space-x-6">
-        <li><Link to="/"><Search size={24} /></Link></li>
-        <li><Link to="/network"><Users size={24} /></Link></li>
-        <li><Link to="/jobs"><Briefcase size={24} /></Link></li>
-        <li><Bell size={24} /></li>
-        <li><MessageSquare size={24} /></li>
-        <li><Link to="/profile"><User size={24} /></Link></li>
-    </ul>
-    </nav>
-</div>
-</header>
+  </header>
+);
+
+const NavItem = ({ to, icon, text }) => (
+  <li>
+    <Link to={to} className="flex flex-col items-center text-gray-500 hover:text-gray-900">
+      {icon}
+      <span className="text-xs mt-1">{text}</span>
+    </Link>
+  </li>
 );
 
 export default Header;
